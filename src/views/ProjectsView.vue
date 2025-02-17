@@ -76,7 +76,7 @@ export default {
           id: 2,
           title: "Yapılacaklar Listesi Web Uygulaması",
           description: "Vue.js kullanarak geliştirdiğim to-do web uygulaması.",
-          image: "to-do-pic.jpg",
+          image: "to-do-pic.png",
           technologies: ["Vue.js", "HTML", "Tailwindcss"],
           demoLink: "https://to-do-app-4dso.onrender.com",
           githubLink: "https://github.com/ellyse12/to-do-app",
@@ -86,7 +86,7 @@ export default {
           title: "E-Ticaret Klon Sayfası",
           description:
             "HTML, JavaScript ve Tailwindcss kullanarak, T-Soft örnek sayfasının klonunu kodladım.",
-          image: "klon-pic.jpg",
+          image: "klon-pic.png",
           technologies: ["HTML", "JavaScript", "Tailwindcss"],
           demoLink: "https://tsoft-internship.onrender.com",
           githubLink: "https://github.com/ellyse12/tsoft_internship",
