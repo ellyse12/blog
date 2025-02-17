@@ -69,7 +69,7 @@ export default {
             "Vue.js ve Tailwind CSS kullanarak geliştirdiğim kişisel blog projesi. Modern ve responsive tasarımı ile kullanıcı dostu bir arayüz sunuyor.",
           image: "blog-pic2.png",
           technologies: ["Vue.js", "Tailwind CSS", "JavaScript"],
-          demoLink: "https://demo-link.com",
+          demoLink: "https://ilkercihandurmus.onrender.com/",
           githubLink: "https://github.com/ellyse12/blog",
         },
         {
