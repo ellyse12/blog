@@ -9,7 +9,7 @@
         class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300"
       >
         <div class="flex flex-col md:flex-row">
-          <div class="md:w-2/5">
+          <div class="md:w-2/5 border">
             <img
               :src="project.image"
               :alt="project.title"
@@ -21,7 +21,7 @@
             <h3 class="text-2xl font-bold mb-3">{{ project.title }}</h3>
             <p class="text-gray-600 mb-4">{{ project.description }}</p>
 
-            <div class="flex flex-wrap gap-2 mb-4">
+            <div class="flex flex-wrap gap-2 mb-4 justify-center">
               <span
                 v-for="tech in project.technologies"
                 :key="tech"
@@ -31,12 +31,12 @@
               </span>
             </div>
 
-            <div class="flex gap-4">
+            <div class="flex gap-4 justify-center">
               <a
                 v-if="project.demoLink"
                 :href="project.demoLink"
                 target="_blank"
-                class="text-blue-600 hover:text-blue-800 font-medium"
+                class="text-emerald-600 hover:text-emerald-800 font-semibold"
               >
                 Demo →
               </a>
@@ -66,31 +66,30 @@ export default {
           id: 1,
           title: "Blog Projesi",
           description:
-            "Vue.js ve Tailwind CSS kullanarak geliştirdiğim kişisel blog projesi. Modern ve responsive tasarımı ile kullanıcı dostu bir arayüz sunuyor. İçerik yönetimi için özel bir CMS sistemi entegre edildi.",
-          image: "https://picsum.photos/seed/1/800/600",
+            "Vue.js ve Tailwind CSS kullanarak geliştirdiğim kişisel blog projesi. Modern ve responsive tasarımı ile kullanıcı dostu bir arayüz sunuyor.",
+          image: "blog-pic2.png",
           technologies: ["Vue.js", "Tailwind CSS", "JavaScript"],
           demoLink: "https://demo-link.com",
-          githubLink: "https://github.com/username/project",
+          githubLink: "https://github.com/ellyse12/blog",
         },
         {
           id: 2,
-          title: "E-Ticaret Uygulaması",
-          description:
-            "MERN stack kullanarak geliştirdiğim tam kapsamlı e-ticaret uygulaması. Ürün yönetimi, sepet işlemleri, ödeme sistemi ve admin paneli gibi temel e-ticaret özellikleri içeriyor.",
-          image: "https://picsum.photos/seed/2/800/600",
-          technologies: ["React", "Node.js", "MongoDB", "Express"],
-          demoLink: "https://demo-link.com",
-          githubLink: "https://github.com/username/project",
+          title: "Yapılacaklar Listesi Web Uygulaması",
+          description: "Vue.js kullanarak geliştirdiğim to-do web uygulaması.",
+          image: "to-do-pic.jpg",
+          technologies: ["Vue.js", "HTML", "Tailwindcss"],
+          demoLink: "https://to-do-app-4dso.onrender.com",
+          githubLink: "https://github.com/ellyse12/to-do-app",
         },
         {
           id: 3,
-          title: "Task Yönetim Uygulaması",
+          title: "E-Ticaret Klon Sayfası",
           description:
-            "Vue.js ve Firebase kullanarak geliştirdiğim task yönetim uygulaması. Gerçek zamanlı güncelleme, drag-and-drop özelliği ve kullanıcı yetkilendirme sistemi bulunuyor.",
-          image: "https://picsum.photos/seed/3/800/600",
-          technologies: ["Vue.js", "Firebase", "Vuex"],
-          demoLink: "https://demo-link.com",
-          githubLink: "https://github.com/username/project",
+            "HTML, JavaScript ve Tailwindcss kullanarak, T-Soft örnek sayfasının klonunu kodladım.",
+          image: "klon-pic.jpg",
+          technologies: ["HTML", "JavaScript", "Tailwindcss"],
+          demoLink: "https://tsoft-internship.onrender.com",
+          githubLink: "https://github.com/ellyse12/tsoft_internship",
         },
       ],
     };

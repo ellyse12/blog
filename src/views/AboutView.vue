@@ -91,7 +91,10 @@
       </div>
     </div>
 
-    <div class="flex justify-center mb-8">
+    <div
+      class="flex justify-center mb-8 md:pt-12 md:pb-20"
+      id="scrollToExperience"
+    >
       <div class="animate-bounce cursor-pointer" @click="scrollToExperience">
         <svg
           class="w-6 h-6 text-gray-500"

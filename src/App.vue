@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Hakkımda</router-link> |
-    <router-link to="/projects">Projelerim</router-link>
+    <router-link to="/projelerim">Projelerim</router-link>
   </nav>
   <router-view />
 </template>
