@@ -1,64 +1,72 @@
 <template>
-  <div class="container mx-auto py-12 px-4 max-w-4xl">
-    <h1 class="text-4xl font-bold mb-12 text-center">Projelerim</h1>
-
-    <div class="space-y-8">
-      <div
-        v-for="project in projects"
-        :key="project.id"
-        class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+  <section :class="{ 'bg-slate-600': darkMode }">
+    <div class="container mx-auto py-12 px-4 max-w-4xl">
+      <h1
+        class="text-4xl font-bold mb-12 text-center"
+        :class="{ 'text-white': darkMode }"
       >
-        <div class="flex flex-col md:flex-row">
-          <div class="md:w-2/5 border">
-            <img
-              :src="project.image"
-              :alt="project.title"
-              class="w-full h-64 md:h-full object-cover"
-            />
-          </div>
+        Projelerim
+      </h1>
 
-          <div class="md:w-3/5 p-6">
-            <h3 class="text-2xl font-bold mb-3">{{ project.title }}</h3>
-            <p class="text-gray-600 mb-4">{{ project.description }}</p>
-
-            <div class="flex flex-wrap gap-2 mb-4 justify-center">
-              <span
-                v-for="tech in project.technologies"
-                :key="tech"
-                class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-              >
-                {{ tech }}
-              </span>
+      <div class="space-y-8">
+        <div
+          v-for="project in projects"
+          :key="project.id"
+          class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+        >
+          <div class="flex flex-col md:flex-row dark:bg-slate-300">
+            <div class="md:w-2/5 border">
+              <img
+                :src="project.image"
+                :alt="project.title"
+                class="w-full h-64 md:h-full object-cover"
+              />
             </div>
 
-            <div class="flex gap-4 justify-center">
-              <a
-                v-if="project.demoLink"
-                :href="project.demoLink"
-                target="_blank"
-                class="text-emerald-600 hover:text-emerald-800 font-semibold"
-              >
-                Demo →
-              </a>
-              <a
-                v-if="project.githubLink"
-                :href="project.githubLink"
-                target="_blank"
-                class="text-gray-600 hover:text-gray-800 font-medium"
-              >
-                GitHub →
-              </a>
+            <div class="md:w-3/5 p-6">
+              <h3 class="text-2xl font-bold mb-3">{{ project.title }}</h3>
+              <p class="text-gray-600 mb-4">{{ project.description }}</p>
+
+              <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                <span
+                  v-for="tech in project.technologies"
+                  :key="tech"
+                  class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                >
+                  {{ tech }}
+                </span>
+              </div>
+
+              <div class="flex gap-4 justify-center">
+                <a
+                  v-if="project.demoLink"
+                  :href="project.demoLink"
+                  target="_blank"
+                  class="text-emerald-600 hover:text-emerald-800 font-semibold"
+                >
+                  Demo →
+                </a>
+                <a
+                  v-if="project.githubLink"
+                  :href="project.githubLink"
+                  target="_blank"
+                  class="text-gray-600 hover:text-gray-800 font-medium"
+                >
+                  GitHub →
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
   name: "ProjectsView",
+  props: { darkMode: Boolean },
   data() {
     return {
       projects: [
