@@ -125,9 +125,11 @@
         />
       </svg>
     </button>
-    <router-link to="/">Hakkımda</router-link>
+    <router-link to="/" class="dark:text-slate-200">Hakkımda</router-link>
     |
-    <router-link to="/projelerim">Projelerim</router-link>
+    <router-link to="/projelerim" class="dark:text-slate-200"
+      >Projelerim</router-link
+    >
   </nav>
   <router-view :darkMode="darkMode" />
 </template>

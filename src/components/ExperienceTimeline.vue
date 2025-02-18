@@ -12,13 +12,15 @@
             ref="experienceCards"
           >
             <div
-              class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 mb-8 h-[300px] flex flex-col justify-between"
+              class="bg-white dark:bg-slate-300 p-6 rounded-lg shadow-lg border border-gray-100 mb-8 h-[300px] flex flex-col justify-between"
             >
               <div>
                 <div class="text-gray-600 text-sm mb-2">
                   {{ experience.company }}
                 </div>
-                <h3 class="text-lg font-bold mb-2">{{ experience.title }}</h3>
+                <h3 class="text-lg font-bold mb-2 dark:text-slate-500">
+                  {{ experience.title }}
+                </h3>
                 <p class="text-gray-700 text-sm flex-grow">
                   {{ experience.description }}
                 </p>
@@ -39,7 +41,9 @@
               <div
                 class="w-4 h-4 rounded-full bg-green-500 border-4 border-white relative z-10"
               ></div>
-              <div class="text-sm text-green-700 font-semibold mt-2">
+              <div
+                class="text-sm text-green-700 dark:text-green-400 font-semibold mt-2"
+              >
                 {{ experience.date }}
               </div>
             </div>
